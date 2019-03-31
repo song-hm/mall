@@ -1,17 +1,13 @@
 package com.shm.mall.jedis;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 public class JedisClientPool implements JedisClient {
 	
-	@Autowired
 	private JedisPool jedisPool;	
-	
-	
-
+		
 	public JedisPool getJedisPool() {
 		return jedisPool;
 	}

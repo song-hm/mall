@@ -1,10 +1,8 @@
 package com.shm.mall.service;
 
-
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.shm.mall.pojo.EasyUIDataGridResult;
 import com.shm.mall.pojo.TbItem;
+import com.shm.mall.pojo.TbItemDesc;
 import com.shm.mall.utils.MallResult;
 
 public interface ItemService {
@@ -15,7 +13,9 @@ public interface ItemService {
 //	MallResult deleteItemById(long itemId);
 	MallResult deleteItem(long[] itemId);
 //	MallResult downItem(long itemId);
-	MallResult instockItem(@RequestParam("ids") long[] itemId,TbItem item);
-	MallResult reshelfItem(@RequestParam("ids") long[] itemId,TbItem item);
+	MallResult instockItem(long[] itemId,TbItem item);
+	MallResult reshelfItem(long[] itemId,TbItem item);
 	MallResult updateItem(TbItem item, String desc);
+	
+	TbItemDesc getItemDescById(long itemId);
 }

@@ -123,8 +123,7 @@ public class ItemController {
 	 * @param itemId
 	 * @return
 	 */
-	@RequestMapping(value="/rest/item/query/item/desc/{itemId}")
-	@ResponseBody
+	@RequestMapping(value="/rest/item/query/item/desc/{itemId}")	
 	public MallResult editItem(@PathVariable long itemId) {
 		MallResult result = itemDescService.getItemDescById(itemId);
 		return result;

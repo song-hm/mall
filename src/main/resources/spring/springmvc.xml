@@ -39,5 +39,6 @@
 	<dubbo:reference interface="com.shm.mall.service.ItemDescService" id="itemDescService" />
 	<dubbo:reference interface="com.shm.mall.content.service.ContentCategoryService" id="contentCategoryService" />
 	<dubbo:reference interface="com.shm.mall.content.service.ContentService" id="contentService" />
+	<dubbo:reference interface="com.shm.mall.search.service.SearchItemService" id="searchItemService" />
 	
 </beans>

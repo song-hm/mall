@@ -5,18 +5,18 @@
     <ul class="fr topTh">
       <li class="login" id="login">
       	<span id="loginbar" style="margin-right: 15px;">
-	      	<a href="https://passport.e3mall.cn/?returnUrl=http%3A//www.e3mall.cn/">请登录</a>
+	      	<a href="http://localhost:8088/page/login">请登录</a>
       	</span>
-      	<a href="https://passport.e3mall.cn/reg/?returnUrl=http%3A//www.e3mall.cn/">免费注册</a>
+      	<a href="http://localhost:8088/page/register">免费注册</a>
       </li>
       <!--<li id='qiyeLogin'><a href='http://www.sfme.me/login.jhtml' target='_blank' rel='nofollow'>员工福利</a></li>-->
-      <li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></li>
+      <li class="myOrder"><a name="sfbest_hp_hp_head_OrderList" class="trackref" href="http://localhost:8092/order/order-cart.html" rel="nofollow">我的订单</a></li>
       <li class="menus">
         <a name="sfbest_hp_hp_head_home1" href="http://home.e3mall.cn/my/index/" rel="nofollow" class="trackref t">我的优选</a><b></b>
         <span class="outline"></span>
         <span class="blank"></span>
         <div class="dd">
-          <div><a name="sfbest_hp_hp_head_home2" class="trackref" href="http://home.e3mall.cn/myorder/index/" rel="nofollow">我的订单</a></div>
+          <div><a name="sfbest_hp_hp_head_home2" class="trackref" href="http://localhost:8092/order/order-cart.html" rel="nofollow">我的订单</a></div>
           <div><a name="sfbest_hp_hp_head_home4" class="trackref" href="http://home.e3mall.cn/my/points/" rel="nofollow">我的积分</a></div>
           <div><a name="sfbest_hp_hp_head_home3" class="trackref" href="http://home.e3mall.cn/favorites/index/" rel="nofollow">我的收藏</a></div>
           <!-- <div><a href="http://home.e3mall.cn/my/balance/" rel="nofollow">账户余额</a></div> -->

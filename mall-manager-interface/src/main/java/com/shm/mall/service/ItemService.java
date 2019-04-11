@@ -11,7 +11,9 @@ public interface ItemService {
 	EasyUIDataGridResult getItemList(int page,int rows);
 	MallResult addItem(TbItem item,String desc);
 //	MallResult deleteItemById(long itemId);
-	MallResult deleteItem(long[] itemId);
+//	MallResult deleteItem(long[] itemId);
+	
+	MallResult deleteItems(long[] itemId,TbItem item);
 //	MallResult downItem(long itemId);
 	MallResult instockItem(long[] itemId,TbItem item);
 	MallResult reshelfItem(long[] itemId,TbItem item);

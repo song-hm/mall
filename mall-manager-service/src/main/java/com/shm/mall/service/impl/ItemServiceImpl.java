@@ -178,10 +178,24 @@ public class ItemServiceImpl implements ItemService {
 	/**
 	 * 批量删除商品
 	 */
-	@Override
+	/*@Override
 	public MallResult deleteItem(long[] itemId) {
 		for (long l : itemId) {
 			itemMapper.deleteByPrimaryKey(l);
+		}
+		return MallResult.ok();
+	}*/
+	
+	/**
+	 * 批量删除商品 ,实际做法是修改商品状态
+	 */
+	@Override
+	public MallResult deleteItems(long[] itemId,TbItem item) {
+		for (long l : itemId) {
+			item = itemMapper.selectByPrimaryKey(l);
+			item.setStatus((byte)3);
+			item.setUpdated(new Date());
+			itemMapper.updateByPrimaryKeySelective(item);
 		}
 		return MallResult.ok();
 	}
@@ -222,6 +236,7 @@ public class ItemServiceImpl implements ItemService {
 		TbItemExample tbItemExample = new TbItemExample();
 		Criteria criteria = tbItemExample.createCriteria();
 		criteria.andIdEqualTo(id);
+		item.setUpdated(new Date());
 		itemMapper.updateByExampleSelective(item,tbItemExample);
 		
 		// 2.根据商品id更新商品描述表
@@ -230,6 +245,7 @@ public class ItemServiceImpl implements ItemService {
 		TbItemDescExample tbItemDescExample = new TbItemDescExample();
 		com.shm.mall.pojo.TbItemDescExample.Criteria createCriteria = tbItemDescExample.createCriteria();
 		createCriteria.andItemIdEqualTo(id);
+		itemDesc.setUpdated(new Date());
 		itemDescMapper.updateByExampleSelective(itemDesc,tbItemDescExample);
 
 		return MallResult.ok();

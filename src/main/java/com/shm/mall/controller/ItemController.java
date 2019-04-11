@@ -91,8 +91,8 @@ public class ItemController {
 	@ResponseBody
 	public MallResult deleteItem(@RequestParam("ids") long[] itemId,TbItem item) {
 		
-		MallResult result = itemService.deleteItem(itemId);
-		result = itemDescService.deleteItemDesc(itemId);
+		MallResult result = itemService.deleteItems(itemId,item);
+//		result = itemDescService.deleteItemDesc(itemId);
 		return result;
 	}
 	

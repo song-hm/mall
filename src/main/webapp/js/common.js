@@ -50,8 +50,10 @@ var E3 = {
         if (val == 1){
             return '正常';
         } else if(val == 2){
-        	return '<span style="color:red;">下架</span>';
-        } else {
+        	return '<span style="color:blue;">下架</span>';
+        } else if(val == 3){
+        	return '<span style="color:red;">删除</span>';
+        }else {
         	return '未知';
         }
     },

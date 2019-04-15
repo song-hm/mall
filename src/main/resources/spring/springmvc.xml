@@ -23,5 +23,6 @@
 	<dubbo:application name="mall-portal-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
 	<dubbo:reference interface="com.shm.mall.content.service.ContentService" id="contentService" />	
+	<dubbo:reference interface="com.shm.mall.sso.service.LoginService" id="loginService" />
 	
 </beans>

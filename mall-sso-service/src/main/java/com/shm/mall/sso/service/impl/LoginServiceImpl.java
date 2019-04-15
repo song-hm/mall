@@ -64,4 +64,13 @@ public class LoginServiceImpl implements LoginService {
 		return MallResult.ok(token);
 	}
 
+	@Override
+	public MallResult userLogout(String token) {
+		if(token == null) {
+			return null;			
+		}
+		jedisClient.del("SESSION"+token);
+		return MallResult.ok();
+	}
+		
 }

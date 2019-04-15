@@ -17,4 +17,5 @@ public interface LoginService {
 	 */
 	//返回值 MallResult,其中包含token信息
 	MallResult userLogin(String username,String password);
+	MallResult userLogout(String token);
 }

@@ -11,7 +11,7 @@ var E3MALL = {
 			success : function(data){
 				if(data.status == 200){
 					var username = data.data.username;
-					var html = username + "，欢迎来到宜立方购物网！<a href=\"http://localhost:8088/page/login.html\" class=\"link-logout\">[退出]</a>";
+					var html = username + "，欢迎来到宜立方购物网！<a href=\"http://localhost:8082/user/logout.html\" class=\"link-logout\">[退出]</a>";
 					$("#loginbar").html(html);
 				}
 			}
